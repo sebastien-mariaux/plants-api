@@ -16,6 +16,13 @@ module ActiveSupport
   end
 end
 
+module ActionDispatch
+  class IntegrationTest
+    def json_response
+      JSON.parse(response.body)
+    end
+  end
+end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
