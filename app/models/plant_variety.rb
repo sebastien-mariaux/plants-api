@@ -1,0 +1,2 @@
+class PlantVariety < ApplicationRecord
+end
