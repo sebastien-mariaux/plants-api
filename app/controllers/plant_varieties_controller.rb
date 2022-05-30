@@ -37,6 +37,6 @@ class PlantVarietiesController < ApplicationController
   end
 
   def allowed_params
-    params.permit(:name)
+    params.require('plant_variety').permit(:name)
   end
 end

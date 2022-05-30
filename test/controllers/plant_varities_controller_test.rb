@@ -26,7 +26,7 @@ class PlantVarietiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   should 'create' do
-    params = { name: 'Pilea' }
+    params = {plant_variety: { name: 'Pilea' }}
     post plant_varieties_path, params: params
     assert_response :created
     expected = { 'name' => 'Pilea' }
@@ -34,7 +34,7 @@ class PlantVarietiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   should 'fail to create' do
-    params = { description: 'Pilea' }
+    params = {plant_variety: { description: 'Pilea' }}
     post plant_varieties_path, params: params
     assert_response :unprocessable_entity
     expected = { 'name' => ["can't be blank"] }
@@ -43,7 +43,7 @@ class PlantVarietiesControllerTest < ActionDispatch::IntegrationTest
 
   should 'update' do
     variety = plant_varieties(:pothos)
-    params = { name: 'new name' }
+    params = {plant_variety: { name: 'new name' }}
     put plant_variety_path(variety), params: params
     assert_response :success
     expected = { 'name' => 'new name' }
@@ -52,7 +52,7 @@ class PlantVarietiesControllerTest < ActionDispatch::IntegrationTest
 
   should 'fail to update' do
     variety = plant_varieties(:pothos)
-    params = { name: '' }
+    params = {plant_variety: { name: '' }}
     put plant_variety_path(variety), params: params
     assert_response :unprocessable_entity
     expected = { 'name' => ["can't be blank"] }
