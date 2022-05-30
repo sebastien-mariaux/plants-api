@@ -1,24 +1,11 @@
-# README
+# PLANTS - API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend for the Plants App 
 
-Things you may want to cover:
+_**WORK IN PROGRESS**_
 
-* Ruby version
+## Run App
 
-* System dependencies
+`rails s`  
+`rails db:seed`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
